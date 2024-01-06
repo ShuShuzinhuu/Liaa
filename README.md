@@ -1,20 +1,15 @@
 <p align="center">
-    <a href="https://colorpicker.fr">
-        <img src="build/icon.png" width="256" height="256" alt="ColorPicker icon" />
+     <a href="https://discord.gg/9xpsFt3FfZ">
+        <img src="https://cdn.discordapp.com/attachments/1193215259452919928/1193303058348789850/baixados_2.jpeg" width="256" height="256" alt="Liaa icon" />
     </a>
-    <h1 align="center">Colorpicker</h1>
-    <p align="center">A mininal but complete colorpicker desktop app</p>
+    <h1 align="center">Liaa💕</h1>
+    <p align="center">Pior bot do discord</p>
     <p align="center">
-        <img src="https://badgen.net/github/release/toinane/colorpicker/stable" />
-        <img src="https://img.shields.io/github/downloads/toinane/colorpicker/total.svg">
-        <img src="https://img.shields.io/github/downloads/toinane/colorpicker/latest/total.svg">
-        <img src="https://img.shields.io/github/release-date/Toinane/colorpicker.svg">
-        <img src="https://badgen.net/david/dep/toinane/colorpicker">
-        <a href="https://snapcraft.io/colorpicker-app">
-            <img alt="colorpicker-app" src="https://snapcraft.io/colorpicker-app/badge.svg" />
-        </a>
-        <a href="https://crowdin.com/project/colorpicker">
-            <img src="https://badges.crowdin.net/colorpicker/localized.svg">
+        <a href="https://github.com/ShuShuzinhuu/Liaa/releases">
+         <img src="https://img.shields.io/badge/Release-Lia_0.0.1-f5a2ec?" />
+        <a href="https://discord.gg/9xpsFt3FfZ">
+         <img src="https://img.shields.io/badge/Discord-9_members-333ce8?logo=discord">
+        <img src="https://img.shields.io/badge/release_date-january 2024-ff00bb">
         </a>
     </p>
 </p>
