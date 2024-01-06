@@ -88,6 +88,7 @@ import os
 
 async def depmykey(interaction: Interaction, mykey: app_commands.Range[str, 0, 100]):
       if mykey.startswith(f'micah-{interaction.user.id}'):
+           os.makedirs('keys', exist_ok=True)
            filename = f'keys/{interaction.user.id}.txt'
            if os.path.exists(filename):
                await interaction.response.send_message('Você já tem uma key registrada use o ``/deletekey``.')    
