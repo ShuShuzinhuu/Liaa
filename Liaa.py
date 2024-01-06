@@ -5,7 +5,6 @@ from discord import app_commands
 from comandos import comands
 from discord import Interaction
 from discord.ext import tasks
-import sqlite3
 
 MY_GUILD = discord.Object(id=986023438634352660)
 
