@@ -3,7 +3,7 @@
 async def help(interaction, help):
     await interaction.response.send_message(f'**Lista de comandos:**\n``/status`` = *Te mostra o status atual do korepi*\n``/downloadkorepi`` = *Donwload da última versão do korepi*\n', ephemeral=True)
 
-#statuskorpei
+#status
 async def status(interaction, status):
    try: 
        with open('status/status.txt', 'r') as arquivo:
@@ -127,4 +127,26 @@ async def expirekey():
     except OSError as e:
         print(f'Erro ao verificar expiração: {e}')
 
+
+
+#version
+async def get_version():
+        repo_owner = 'ShuShuzinhuu'
+        repo_name = 'Liaa'
+
+        response = requests.get(f'https://api.github.com/repos/{repo_owner}/{repo_name}/releases/latest')
+        response.raise_for_status()  # Isso lançará uma exceção se a resposta não for bem-sucedida
+        data = response.json()
+        release_name = data.get('name', 'N/A')
+    
+        return release_name
+
+#update_presence
+import discord
+async def update_presence(bot):
+     current_version = ""
+     new_version = await get_version()
+     if new_version != current_version:
+        current_version = new_version
+        await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=f'💫{current_version}💫'))
 
