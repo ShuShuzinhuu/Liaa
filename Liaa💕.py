@@ -26,7 +26,7 @@ async def on_ready():
     expirekey.start()
     update_presence.start()
 
-@tasks.loop(seconds=30)
+@tasks.loop(minutes=130)
 async def update_presence():
    await comands.update_presence(bot)
 
