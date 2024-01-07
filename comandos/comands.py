@@ -131,15 +131,18 @@ async def expirekey():
 
 #version
 async def get_version():
-        repo_owner = 'ShuShuzinhuu'
-        repo_name = 'Liaa'
-
-        response = requests.get(f'https://api.github.com/repos/{repo_owner}/{repo_name}/releases/latest')
-        response.raise_for_status()  # Isso lançará uma exceção se a resposta não for bem-sucedida
-        data = response.json()
-        release_name = data.get('name', 'N/A')
-    
-        return release_name
+        try:
+         repo_owner = 'ShuShuzinhuu'
+         repo_name = 'Liaa'
+         response = requests.get(f'https://api.github.com/repos/{repo_owner}/{repo_name}/releases/latest')
+         response.raise_for_status()  # Isso lançará uma exceção se a resposta não for bem-sucedida
+         data = response.json()
+         release_name = data.get('name', 'N/A')
+         response.raise_for_status()
+        except:
+         release_name = 'I love You ShuKurenai`s'
+            
+         return release_name
 
 #update_presence
 import discord
