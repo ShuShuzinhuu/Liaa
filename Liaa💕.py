@@ -1,4 +1,3 @@
-
 from typing import Optional
 import discord
 from discord import app_commands
@@ -23,7 +22,17 @@ bot = Mybot()
 async def on_ready():
     print(f'Bot conectado como {bot.user.name}')
     await expirekey()
+    await update_presence()
     expirekey.start()
+    update_presence.start()
+
+@tasks.loop(seconds=30)
+async def update_presence():
+   await comands.update_presence(bot)
+
+
+async def get_version():
+    return await comands.get_version()
 
 @bot.tree.command()
 async def help(interaction: Interaction):
