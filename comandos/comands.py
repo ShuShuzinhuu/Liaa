@@ -91,22 +91,22 @@ async def depmykey(interaction: Interaction, mykey: app_commands.Range[str, 0, 1
            os.makedirs('keys', exist_ok=True)
            filename = f'keys/{interaction.user.id}.txt'
            if os.path.exists(filename):
-               await interaction.response.send_message('Você já tem uma key registrada use o ``/deletekey``.')    
+               await interaction.response.send_message('Você já tem uma key registrada use o ``/deletemykey``.', ephemeral=True)    
            else:
                with open(filename, 'a') as arquivo:
                    arquivo.write(mykey)
-                   await interaction.response.send_message(f'Sua key: ``{mykey}`` foi registrada!')
+                   await interaction.response.send_message(f'Sua key: ``{mykey}`` foi registrada!', ephemeral=True)
       else:
-          await interaction.response.send_message('Coloque uma key válida!')
+          await interaction.response.send_message('Coloque uma key válida!', ephemeral=True)
 
 #deletemykey
 async def deletemykey(interaction: Interaction):
       filename = f'keys/{interaction.user.id}.txt'
       if os.path.exists(filename):
           os.remove(filename)
-          await interaction.response.send_message('Key deletada com sucesso!')
+          await interaction.response.send_message('Key deletada com sucesso!', ephemeral=True)
       else:
-          await interaction.response.send_message('Sua key ou ja foi deletada ou ja expirou!')
+          await interaction.response.send_message('Sua key ou ja foi deletada ou ja expirou!', ephemeral=True)
     
 
 #expirekey
