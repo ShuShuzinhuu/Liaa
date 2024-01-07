@@ -135,7 +135,7 @@ async def get_version():
          repo_owner = 'ShuShuzinhuu'
          repo_name = 'Liaa'
          response = requests.get(f'https://api.github.com/repos/{repo_owner}/{repo_name}/releases/latest')
-         response.raise_for_status()  # Isso lançará uma exceção se a resposta não for bem-sucedida
+         response.raise_for_status()
          data = response.json()
          release_name = data.get('name', 'N/A')
          response.raise_for_status()
